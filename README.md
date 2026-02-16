@@ -63,21 +63,26 @@ Open your browser and go to: `http://localhost:3000`
 
 **1. Creating a lobby:**
 In the main menu, you can create or join a lobby. You can also choose your emoji avatar.
+
 ![index](https://files.catbox.moe/l93lj5.png)
 
 In the lobby, you can see the lobby code, the number of players, and their emoji avatars.
+
 ![lobby](https://files.catbox.moe/zsn28o.png)
 
 **2. Writing phase:**
 While writing the story, you can hover over an emoji at any time to see its name.
+
 ![writing](https://files.catbox.moe/eyn08n.png)
 
 **3. Guessing phase:**
 The player is given 6 different emoji combinations and the other players to choose from.
+
 ![guessing](https://files.catbox.moe/sskepl.png)
 
 **4. Chat:**
 First, the emojis given to the player are shown, then their story, and finally the result of another player's guess. The host controls the flow of the chat.
+
 ![chat](https://files.catbox.moe/jmzibt.png)
 
 **5. Results:**
@@ -91,6 +96,7 @@ The leaderboard shows the game results, displaying the players and their earned 
 * +0.5 for correctly guessing the author of someone else's story.
 
 This scoring system is designed to incentivize players to write stories in a way that helps others guess the author and the emojis correctly.
+
 ![leaderboard](https://files.catbox.moe/vphg4x.png)
 
 ## 👥・team
