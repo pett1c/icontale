@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icontale</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>icontale</h1>
+        <div id="main-menu">
+            <div class="tabs">
+                <button id="tab-create" class="tab active">Create Lobby</button>
+                <button id="tab-join" class="tab">Join Lobby</button>
+            </div>
+            <div class="emoji-block">
+                <span id="user-emoji" class="user-emoji circle">😀</span>
+                <button id="change-emoji" class="change-emoji-btn circle" title="Change emoji">🔄</button>
+            </div>
+            <div class="menu-fields">
+                <input type="text" id="username" placeholder="Nickname">
+                <input type="text" id="room-code-input" placeholder="Lobby Code" maxlength="6" style="display:none;">
+                <button id="menu-action-btn">Create lobby</button>
+            </div>
+        </div>
+        <div id="lobby" style="display:none;">
+            <div class="lobby-title">Lobby <span id="room-code"></span></div>
+            <div class="lobby-players-grid" id="players-grid"></div>
+            <button id="start-game" disabled>Start</button>
+        </div>
+        <div id="story-section" style="display:none; margin-top:2rem;">
+            <div>Your emojis: <span id="emojis"></span></div>
+            <div>Time left: <span id="timer">2:00</span></div>
+            <textarea id="story" rows="8" cols="60" placeholder="Write your story here (50-500 words)..." maxlength="4000"></textarea>
+            <div>Word count: <span id="word-count">0</span></div>
+            <button id="submit-story">Submit story</button>
+        </div>
+        <div id="guess-section" style="display:none; margin-top:2rem;">
+            <div class="guess-flex">
+                <div class="guess-story-block">
+                    <div class="guess-story-title">Story to guess:</div>
+                    <div id="guess-story" class="guess-story-text"></div>
+                </div>
+                <div class="guess-emoji-title">Choose the emoji combination:</div>
+                <div id="emoji-options" class="guess-emoji-options"></div>
+                <div class="guess-player-title">Who is the author?</div>
+                <div id="player-options" class="guess-player-options"></div>
+                <button id="submit-guess" class="guess-submit-btn" style="margin-top:1.5em;">Submit</button>
+            </div>
+        </div>
+        <div id="results-section" style="display:none; margin-top:2rem;">
+            <div class="results-flex">
+                <div class="results-sidebar" id="results-sidebar"></div>
+                <div class="results-chat-block">
+                    <div id="results-chat" class="results-chat"></div>
+                    <button id="results-continue-btn" class="results-continue-btn" style="display:none;">Continue</button>
+                </div>
+            </div>
+            <table id="leaderboard-table" border="1" style="margin-bottom:1em;"></table>
+        </div>
+        <div id="error-message" style="color:red;"></div>
+        <div id="text-writing-section" style="display:none; margin-top:2rem;">
+            <div class="writing-flex">
+                <div class="writing-timer">
+                    <div class="timer-time" id="writing-timer-time">03:00</div>
+                    <div class="timer-bar-outer">
+                        <div class="timer-bar-inner" id="writing-timer-bar"></div>
+                    </div>
+                </div>
+                <div class="writing-main">
+                    <div class="writing-emojis" id="writing-emojis"></div>
+                    <textarea id="writing-story" rows="8" cols="60" placeholder="Write your story here..." maxlength="4000"></textarea>
+                    <div class="writing-controls">
+                        <button id="writing-finish-btn">Finish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
