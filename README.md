@@ -101,6 +101,6 @@ This scoring system is designed to incentivize players to write stories in a way
 
 ## 👥・team
 
-This project was developed by a group of three students for module 306.
+This project was developed by a group of three students for module 306 and contains the original version of icontale. It is published here for archival and attribution purposes.
 
 *Made with ❤️*
